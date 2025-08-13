@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      max-width: 800px;
+    }
+    header, main, footer {
+      margin-bottom: 2em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+    img, video {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1em;
+      border-radius: 4px;
+    }
+    form > div {
+      margin-bottom: 1em;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.25em;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<header>
+  <h1>Event Registration Form</h1>
+  <p>Welcome! Please fill in the form below to register for our upcoming events.</p>
+</header>
+<body>
+    <main>
+  <section>
+    <h2>Available Events</h2>
+    <ul>
+      <li><strong>Web Development Workshop</strong> - Learn HTML, CSS, and JavaScript basics.</li>
+      <li><strong>Marketing Seminar</strong> - Strategies for digital marketing success.</li>
+      <li><strong>Networking Night</strong> - Meet industry professionals and peers.</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Event Schedule</h2>
+    <table>
+      <caption>Event Dates and Venues</caption>
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Web Development Workshop</td>
+          <td>September 10, 2025</td>
+          <td>Room 101, Tech Center</td>
+        </tr>
+        <tr>
+          <td>Marketing Seminar</td>
+          <td>September 15, 2025</td>
+          <td>Main Conference Hall</td>
+        </tr>
+        <tr>
+          <td>Networking Night</td>
+          <td>September 20, 2025</td>
+          <td>Reception Lounge</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+    <section>
+    <h2>Event Highlights</h2>
+    <img src="images/pexels-arunkr-3353994.jpg" alt="Photo from last year's event" />
+    <video controls width="720" poster="images/video-poster.jpg">
+      <source src="media/Crying-eating.mp4" type="video/mp4" />
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+    <section>
+    <h2>Registration Form</h2>
+    <form action="#" method="POST" novalidate>
+      <!-- Full Name -->
+      <div>
+        <label for="fullName">Full Name</label>
+        <input 
+          type="text" 
+          id="fullName" 
+          name="fullName" 
+          placeholder="Enter your full name" 
+          autocomplete="name" 
+          required 
+          minlength="3" 
+          maxlength="100" 
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="you@example.com" 
+          autocomplete="email" 
+          required 
+        />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="At least 6 characters" 
+          minlength="6" 
+          required 
+          autocomplete="new-password" 
+        />
+      </div>
+
+      <!-- Age (readonly as example) -->
+      <div>
+        <label for="age">Age</label>
+        <input 
+          type="number" 
+          id="age" 
+          name="age" 
+          value="18" 
+          min="18"
+          max="100"
+          required
+          readonly
+          aria-readonly="true"
+        />
+      </div>
+
+      <!-- Gender dropdown -->
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">-- Please select --</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+          <option value="prefer-not-to-say">Prefer not to say</option>
+        </select>
+      </div>
+
+      <!-- Appointment Date -->
+      <div>
+        <label for="appointment">Preferred Appointment Date</label>
+        <input 
+          type="date" 
+          id="appointment" 
+          name="appointment" 
+          required 
+          min="2025-09-01" 
+          max="2025-12-31" 
+        />
+      </div>
+
+      <!-- Subscribe to Newsletter -->
+      <div>
+        <fieldset>
+          <legend>Subscribe to Newsletter?</legend>
+          <label>
+            <input type="radio" name="newsletter" value="yes" checked />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="newsletter" value="no" />
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <!-- Comments -->
+      <div>
+        <label for="comments">Any Comments or Questions?</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Type here..."></textarea>
+      </div>
+
+      <!-- Submit button -->
+      <div>
+        <button type="submit">Submit Registration</button>
+      </div>
+    </form>
+  </section>
+</main>
+<footer>
+  <p>Contact us at <a href="mailto:chachalesley18@gmail.com">chachalesley18@gmail.com</a> or call +2547-9642-0241</p>
+  <p>&copy; 2025 Sherlesley Holdings</p>
+</footer>
+</body>
+</html>
